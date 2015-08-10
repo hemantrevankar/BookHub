@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="bookhub.entity">
+   <class name="UserDownload" table="user_downloads">
+      <meta attribute="class-description">
+         This class contains the user detail. 
+      </meta>
+      
+      <id name="id" column="id" type="int">
+      	<generator class="native"/>
+      </id>
+      
+     
+      <property name="userid" column="user_id" type="int"/>
+      <property name="bookid" column="book_id" type="int"/>
+      
+      <property name="created" column="created" type="date"/>
+      <property name="modified" column="modified" type="date"/>
+ <!--      <many-to-one  name="User" column="user_id"  not-null="true"/>
+<many-to-one name="Book" column="book_id"  not-null="true"></many-to-one> -->
+   </class>
+</hibernate-mapping>
+             

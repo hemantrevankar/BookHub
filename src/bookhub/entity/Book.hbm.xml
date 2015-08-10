@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="bookhub.entity">
+   <class name="Book" table="books">
+      <meta attribute="class-description">
+         This class contains the book detail. 
+      </meta>
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+      <property name="isbn" column="isbn_no" type="string"/>
+      <property name="title" column="tittle" type="string"/>
+      <property name="description" column="description" type="string"/>
+      <property name="author" column="author" type="string"/>
+      <property name="picPath" column="pic" type="string"/>
+      <property name="FilePath" column="file" type="string"/>
+      <property name="status" column="status" type="int"/>
+      <property name="created" column="created" type="date"/>
+      <property name="modified" column="modified" type="date"/>
+   </class>
+</hibernate-mapping>

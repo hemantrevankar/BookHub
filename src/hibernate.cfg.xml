@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/bookhub</property>
+        <property name="hibernate.connection.password">itsmysql</property>
+        <property name="hibernate.connection.username">root</property>
+      
+ <!--        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-iron-east-02.cleardb.net:3306/ad_b172b78a6687a9e?autoReconnect=true</property>
+        <property name="hibernate.connection.password">d8236666</property>
+        <property name="hibernate.connection.username">b88f8fd2a56b97</property> -->
+        
+        <property name="connection.pool_size">1</property>
+        
+        <property name="current_session_context_class">thread</property>
+        
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        
+        <property name="cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+        
+         <property name="hibernate.cache.use_query_cache">false</property>   
+                          
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        
+        <property name="show_sql">true</property>
+        
+        <property name="hbm2ddl.auto">create</property>  <!-- create -->
+        
+        <mapping resource="bookhub/entity/User.hbm.xml"/>
+        <mapping resource="bookhub/entity/Book.hbm.xml"/>
+          <mapping resource="bookhub/entity/UserDownload.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
